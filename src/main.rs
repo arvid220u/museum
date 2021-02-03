@@ -1,5 +1,7 @@
 mod tutorial;
+mod dots;
 
 fn main() {
-    tutorial::main();
+    // tutorial::main();
+    dots::main();
 }

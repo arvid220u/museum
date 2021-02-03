@@ -1240,6 +1240,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "museum"
+version = "0.1.0"
+dependencies = [
+ "nannou",
+]
+
+[[package]]
 name = "nannou"
 version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2240,13 +2247,6 @@ dependencies = [
  "quote 1.0.8",
  "syn",
  "unicode-xid 0.2.1",
-]
-
-[[package]]
-name = "testnannou"
-version = "0.1.0"
-dependencies = [
- "nannou",
 ]
 
 [[package]]
