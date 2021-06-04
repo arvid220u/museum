@@ -8,6 +8,12 @@ pub fn main() {
 const DOT_RADIUS: f32 = 3.0;
 const NUM_Y: usize = 30;
 const NUM_X: usize = 50;
+const BACKGROUND_COLOR: Srgb<u8> = BLACK;
+const DOT_COLOR: Srgb<u8> = WHITE;
+
+// TODO: make the bounces smooth somehow
+// TODO: make time dependency smooth / sine wave?
+// TODO: use some 2D function instead of 1D, or make y dimension interesting somehow
 
 fn view(app: &App, frame: Frame) {
     // get canvas to draw on
@@ -16,7 +22,7 @@ fn view(app: &App, frame: Frame) {
     let t = app.elapsed_frames();
 
     // set background to blue
-    draw.background().color(BLACK);
+    draw.background().color(BACKGROUND_COLOR);
 
     let del_y = win.h() / (NUM_Y as f32);
     // let del_x = (win.right() - win.left()) / (NUM_X as f32);
@@ -34,7 +40,7 @@ fn view(app: &App, frame: Frame) {
         //     draw.ellipse().x_y(x, y).radius(DOT_RADIUS).color(WHITE);
         // }
         for x in &xs {
-            draw.ellipse().x_y(*x as f32, y).radius(DOT_RADIUS).color(WHITE);
+            draw.ellipse().x_y(*x as f32, y).radius(DOT_RADIUS).color(DOT_COLOR);
         }
     }
 
